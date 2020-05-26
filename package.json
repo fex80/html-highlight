@@ -4,6 +4,10 @@
   "description": "Adds <span> tags to html content at specified positions – useful to highlight search results.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "sideEffects": false,  
   "scripts": {
     "build": "gulp",
     "test": "node_modules/.bin/jest --passWithNoTests",
