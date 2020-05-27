@@ -32,6 +32,10 @@ Currently, *we do not support nested or overlapping highlights*.
 
 # RELEASE NOTES
 
+## 1.0.2
+* made an IE11-friendy move by replacing template strings with regular string concatenation 
+
+
 ## 1.0.1
 * including HighlightSpecs in error message
 

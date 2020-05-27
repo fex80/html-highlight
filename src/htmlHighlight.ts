@@ -44,7 +44,7 @@ export function htmlHighlight(
 
     const length = highlightSpec.position[1]
 
-    const highlightStart = `<span class="${highlightSpec.className}">`
+    const highlightStart = '<span class="' + highlightSpec.className + '">'
     const highlightEnd = '</span>'
 
     result +=
