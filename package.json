@@ -1,13 +1,13 @@
 {
   "name": "@fex80/html-highlight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds <span> tags to html content at specified positions – useful to highlight search results.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
-  "sideEffects": false,  
+  "sideEffects": false,
   "scripts": {
     "build": "gulp",
     "test": "node_modules/.bin/jest --passWithNoTests",
