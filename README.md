@@ -32,8 +32,11 @@ Currently, *we do not support nested or overlapping highlights*.
 
 # RELEASE NOTES
 
-## 1.0.0
+## 1.0.1
+* including HighlightSpecs in error message
 
+
+## 1.0.0
 * Initial Release
 
 

@@ -34,6 +34,12 @@ describe('htmlHighlight', function () {
   it('throws when there is an overlap', function () {
     expect(() => {
       htmlHighlight('I say Hello World.', [{ position: [2, 3], className: 'c2' }, { position: [0, 10], className: 'c1' }])
-    }).toThrowError()
+    }).toThrowError('not supported')
+  })
+
+  it('includes the sorted highlightSpecs in the error message', function () {
+    expect(() => {
+      htmlHighlight('I say Hello World.', [{ position: [2, 3], className: 'c2' }, { position: [0, 10], className: 'c1' }])
+    }).toThrowError('{"position":[0,10],"className":"c1"},{"position":[2,3],"className":"c2"}')
   })
 })

@@ -40,7 +40,7 @@ export function htmlHighlight(
   for (let i = 0; i < highlightSpecs.length; i++) {
     const highlightSpec = highlightSpecs[i]
     const positionIndex = highlightSpec.position[0]
-    if (positionIndex < lastIndex) throw new Error('nested highlights are not supported')
+    if (positionIndex < lastIndex) throw new Error('nested highlights are not supported: ' + JSON.stringify(highlightSpecs))
 
     const length = highlightSpec.position[1]
 
