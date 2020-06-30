@@ -9,7 +9,7 @@ export type HighlightSpecs = HighlightSpec[]
 export type HighlightSpec = {
   /** Defines where the highlight will be applied */
   position: HighlightPosition,
-  /** The CSS class(es) to apply on the highlight <span> element */
+  /** The CSS class(es) to apply on the highlight <mark> element */
   className: string,
 }
 
@@ -22,7 +22,7 @@ export type HighlightPosition = [number, number]
 
 /**
  * Adds highlights to a source document, e.g. a html document. The highlights
- * will be added in form of <span> elements, whose CSS-class we can specify.
+ * will be added in form of <mark> elements, whose CSS-class we can specify.
  * @param {string} sourceDoc - The document we should add highlights to
  * @param {HighlightSpecs} highlightSpecs - Defines the highlights we will add to the document. It's a array of {HighlightSpec} objects.
  */
@@ -44,8 +44,8 @@ export function htmlHighlight(
 
     const length = highlightSpec.position[1]
 
-    const highlightStart = '<span class="' + highlightSpec.className + '">'
-    const highlightEnd = '</span>'
+    const highlightStart = '<mark class="' + highlightSpec.className + '">'
+    const highlightEnd = '</mark>'
 
     result +=
       sourceDoc.substr(lastIndex, positionIndex - lastIndex) + // Text since last highlight (or beginning of document)

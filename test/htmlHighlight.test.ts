@@ -11,24 +11,24 @@ describe('htmlHighlight', function () {
     expect(result).toEqual('I say Hello World.')
   })
 
-  it('adds the class in a span', function () {
+  it('adds the class in a mark', function () {
     const result = htmlHighlight('I say Hello World.', [{ position: [0, 1], className: 'c1' }])
-    expect(result).toEqual('<span class="c1">I</span> say Hello World.')
+    expect(result).toEqual('<mark class="c1">I</mark> say Hello World.')
   })
 
-  it('adds another class in a span', function () {
+  it('adds another class in a mark', function () {
     const result = htmlHighlight('I say Hello World.', [{ position: [0, 1], className: 'c2' }])
-    expect(result).toEqual('<span class="c2">I</span> say Hello World.')
+    expect(result).toEqual('<mark class="c2">I</mark> say Hello World.')
   })
 
   it('does not mind the order of the specified positions A', function () {
     const result = htmlHighlight('I say Hello World.', [{ position: [0, 1], className: 'c1' }, { position: [2, 3], className: 'c2' }])
-    expect(result).toEqual('<span class="c1">I</span> <span class="c2">say</span> Hello World.')
+    expect(result).toEqual('<mark class="c1">I</mark> <mark class="c2">say</mark> Hello World.')
   })
 
   it('does not mind the order of the specified positions B', function () {
     const result = htmlHighlight('I say Hello World.', [{ position: [2, 3], className: 'c2' }, { position: [0, 1], className: 'c1' }])
-    expect(result).toEqual('<span class="c1">I</span> <span class="c2">say</span> Hello World.')
+    expect(result).toEqual('<mark class="c1">I</mark> <mark class="c2">say</mark> Hello World.')
   })
 
   it('throws when there is an overlap', function () {
