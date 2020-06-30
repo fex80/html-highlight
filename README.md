@@ -1,6 +1,6 @@
 # HTML HIGHLIGHT
 
-Adds `<span>` tags to html content at specified positions – useful to highlight search results.
+Adds `<mark>` tags to html content at specified positions – useful to highlight search results.
 
 
 ## Usage
@@ -11,7 +11,7 @@ Add a highlight on the first letter of the text with CSS class `c1`:
 
 ```TypeScript 
 htmlHighlight('I say Hello World.', [{ position: [0, 1], className: 'c1' }])
- --> '<span class="c1">I</span> say Hello World.'
+ --> '<mark class="c1">I</mark> say Hello World.'
 ```
 
 
@@ -23,7 +23,7 @@ htmlHighlight('I say Hello World.', [
   { position: [2, 3], className: 'c2' }
 ])
 
---> '<span class="c1">I</span> <span class="c2">say</span> Hello World.')
+--> '<mark class="c1">I</mark> <mark class="c2">say</mark> Hello World.')
 ```
 
 That's it :)
@@ -31,6 +31,10 @@ That's it :)
 Currently, *we do not support nested or overlapping highlights*.
 
 # RELEASE NOTES
+
+## 2.0.0
+* now using  `<mark>` tags as opposed to `<span>`
+
 
 ## 1.0.2
 * made an IE11-friendy move by replacing template strings with regular string concatenation 
